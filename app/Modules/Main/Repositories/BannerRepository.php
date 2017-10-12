@@ -30,8 +30,8 @@ class BannerRepository extends AbstractResource
     {
         $banners = $this->em->getRepository(Banner::class)->findAll();
         $banners = array_map(
-            function ($photo) {
-                return $photo->getArrayCopy();
+            function ($banners) {
+                return $banners->getArrayCopy();
             },
             $banners
         );
