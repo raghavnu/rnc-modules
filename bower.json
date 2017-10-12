@@ -1,0 +1,28 @@
+{
+  "name": "modularmvc",
+  "authors": [
+    "ragu.cdh@outlook.com"
+  ],
+  "description": "Modular MVC Framework",
+  "main": "",
+  "keywords": [
+    "Modules",
+    "MVC",
+    "PHP-DI",
+    "Twig",
+    "Doctrine"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sweetalert": "^2.0.6"
+  }
+}

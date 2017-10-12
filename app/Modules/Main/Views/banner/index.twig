@@ -1,0 +1,9 @@
+{% extends '@Main/layout.twig' %}
+{% block content %}
+    <h1>Banner List</h1>
+    <ul>
+        {% for banner in banners %}
+            <li><a href="{{ path_for('banner.show',{'slug':banner.slug}) }}">{{ banner.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
