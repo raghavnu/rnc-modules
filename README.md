@@ -28,6 +28,14 @@ https://twig.symfony.com/
 ````
 Build Super fast api resource
 ````
+### Run Project
+````
+1. clone repository
+2. composer install
+3. Configure database in config/settings
+4. Run Project :: php -S localhost:8000 -t public 
+````
+
 ### Documentation
 
 ````
