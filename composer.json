@@ -1,9 +1,13 @@
 {
+    "name": "rnc-modules",
+    "description": "The modular MVC framework",
+    "keywords": ["framework", "modules","slim 3.0"],
+    "license": "MIT",
+    "type": "project",
     "require": {
         "slim/slim": "^3.0",
         "slim/twig-view": "^2.1",
         "php-di/slim-bridge": "^1.0",
-        "illuminate/database": "~5.1",
         "doctrine/orm": "2.4.*",
         "symfony/yaml": "2.*",
         "vlucas/phpdotenv": "^2.4",
