@@ -38,9 +38,9 @@ return [
         'connection' => [
             'driver' => 'pdo_mysql',
             'host' =>'localhost',
-            'dbname' =>'db_slim3' ,
+            'dbname' =>'your_db' ,
             'user' => 'root',
-            'password' =>'bidhee321',
+            'password' =>'secret_password',
         ]
     ],
 
