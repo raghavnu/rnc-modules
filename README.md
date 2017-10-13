@@ -1,7 +1,7 @@
 # Modular mvc framework
 
 Fully Modular framework
-Just plug and play. Flexible and scalable. Industry ready framework.
+Flexible and scalable. Industry ready framework.
 ````
 Build on top of slim 3.0 routing
 ````
@@ -31,9 +31,12 @@ Build Super fast api resource
 ### Run Project
 ````
 1. clone repository
-2. composer install
-3. Configure database in config/settings
+2. Go to project directory via terminal
+3. composer install
+4. Configure database in config/settings
+5. vendor/bin/doctrine orm:schema-tool:update --force
 4. Run Project :: php -S localhost:8000 -t public 
+5. Create your own modules according to need.
 ````
 
 ### Documentation
