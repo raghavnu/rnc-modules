@@ -1,7 +1,7 @@
 # Modular Php framework
 
-Fully Modular Php framework
-Just plug and play. Flexible and scalable. Industry ready framework.
+Fully Modular framework
+Flexible and scalable. Industry ready framework.
 ````
 Uses slim 3.0 routing
 Strong Validation Class
