@@ -1,19 +1,19 @@
-# Modular mvc framework
+# Modular Php framework
 
 Fully Modular framework
 Flexible and scalable. Industry ready framework.
 ````
-Build on top of slim 3.0 routing
+Uses slim 3.0 routing
+Strong Validation Class
+Csrf Protection
 ````
 ### Doctrine Schema
 ````
 Powerful Entity mechanism by Doctrine. Easy and painless to use.
-
-vendor/bin/doctrine orm:schema-tool:update --force
 ````
 ### PHP Di
 ````
-Autoloading of classes inside modules. You dont have to inject Controller and any classes inside Modules folder in DI.
+Auto injecting classes to DI from modules.
 
 ````
 
@@ -31,13 +31,14 @@ Build Super fast api resource
 ### Run Project
 ````
 1. clone repository
-2. Go to project directory via terminal
-3. composer install
-4. create .env file and copy data from .env.example
-5. Configure database in .env file
-6. vendor/bin/doctrine orm:schema-tool:update --force
+2. composer install
+3. create .env file and copy data from .env.example
+4. Configure database in .env file
+5. Create Entity
+6. Run Migration ::[vendor/bin/doctrine orm:schema-tool:update --force] from root folder
 7. Run Project :: php -S localhost:8000 -t public 
-8. Create your own modules according to need.
+8. Open Project on Browser [localhost:8000]
+9. Feel free for any queries.
 ````
 
 ### Documentation
