@@ -1,6 +1,28 @@
 <?php
 use Doctrine\ORM\Tools\Console\ConsoleRunner;
 use Doctrine\ORM\EntityManager;
+use Doctrine\Common\EventManager;
+use Acme\TablePrefix;
+use Doctrine\ORM\Events;
+
+require __DIR__.'/../vendor/autoload.php';
+
+
+/*
+ |==================================================================
+ | Environment File
+ |==================================================================
+ |
+ * */
+$dotEnv = new Dotenv\Dotenv(__DIR__.'/../');
+$dotEnv->load();
+/*
+ |==================================================================
+ | Doctrine Cli Configuration
+ |==================================================================
+ | Command Line Interface for Doctrine
+ |
+ * */
 
 $settings = include 'Settings.php';
 
@@ -12,6 +34,11 @@ $config = \Doctrine\ORM\Tools\Setup::createAnnotationMetadataConfiguration(
     false
 );
 
-$em = EntityManager::create($settings['doctrine']['connection'], $config);
+//Table Prefix Event Listner
+$evm = new EventManager();
+$tablePrefix = new TablePrefix(getenv('DB_PREFIX',''));
+$evm->addEventListener(Events::loadClassMetadata, $tablePrefix);
+
+$em = EntityManager::create($settings['doctrine']['connection'], $config,$evm);
 
 return ConsoleRunner::createHelperSet($em);

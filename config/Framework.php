@@ -2,6 +2,9 @@
 
 namespace Config;
 
+use Acme\TablePrefix;
+use Doctrine\Common\EventManager;
+use Doctrine\ORM\Events;
 use Slim\Views\Twig;
 use DI\Bridge\Slim\App;
 use DI\ContainerBuilder;
@@ -56,6 +59,8 @@ class Framework extends App
             },
             EntityManager::class => function () {
 
+                $evm = new EventManager();
+
                 $settings = include ROOT . '../config/Settings.php';
 
                 $config = ToolSetup::createAnnotationMetadataConfiguration(
@@ -65,7 +70,11 @@ class Framework extends App
                     $settings['doctrine']['meta']['cache'],
                     false
                 );
-                return EntityManager::create($settings['doctrine']['connection'], $config);
+                //Table Prefix Event Listner
+                $tablePrefix = new TablePrefix(getenv('DB_PREFIX',''));
+                $evm->addEventListener(Events::loadClassMetadata, $tablePrefix);
+
+                return EntityManager::create($settings['doctrine']['connection'], $config,$evm);
             },
             Flash::class => function () {
                 return new Flash();
