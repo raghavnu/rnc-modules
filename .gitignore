@@ -26,10 +26,10 @@ Thumbs.db
 node_modules
 bower_components
 
-# Slim core
+#Vendor
 vendor/*
 
 #Application
-storage/cache/*
-public/assets/uploads/*
+storage/cache
+public/assets/uploads
 .env
