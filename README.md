@@ -33,10 +33,11 @@ Build Super fast api resource
 1. clone repository
 2. Go to project directory via terminal
 3. composer install
-4. Configure database in config/settings
-5. vendor/bin/doctrine orm:schema-tool:update --force
-4. Run Project :: php -S localhost:8000 -t public 
-5. Create your own modules according to need.
+4. create .env file and copy data from .env.example
+5. Configure database in .env file
+6. vendor/bin/doctrine orm:schema-tool:update --force
+7. Run Project :: php -S localhost:8000 -t public 
+8. Create your own modules according to need.
 ````
 
 ### Documentation

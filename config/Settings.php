@@ -37,10 +37,10 @@ return [
         ],
         'connection' => [
             'driver' => 'pdo_mysql',
-            'host' =>'localhost',
-            'dbname' =>'your_db' ,
-            'user' => 'root',
-            'password' =>'secret_password',
+            'host' =>getenv('DB_HOST','localhost'),
+            'dbname' =>getenv('DB_DATABASE','your_db'),
+            'user' =>getenv('DB_USERNAME', 'root'),
+            'password' =>getenv('DB_PASSWORD',''),
         ]
     ],
 

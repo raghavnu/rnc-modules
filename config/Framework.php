@@ -24,7 +24,7 @@ class Framework extends App
     public function definitions()
     {
         return [
-            'settings.displayErrorDetails' => true,
+            'settings.displayErrorDetails' => (getenv('APP_ENV')=='development')? true : false,
             Twig::class => function (ContainerInterface $container) {
                 $view = new Twig([],
                     [
